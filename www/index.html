@@ -10,13 +10,18 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+        
+        <button onclick="capturePhoto();">Tirar Foto</button>
+        <br>
+        <button onclick="capturePhotoEdit();">Tirar Foto Editável</button>
+        <br>
+        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button>
+        <br>
+        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button>        
+        <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+        <img style="display:none;" id="largeImage" src="" />
+        
+        <script type="text/javascript" src="js/apiref.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>
